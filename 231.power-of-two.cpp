@@ -67,10 +67,8 @@ public:
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        else  return false;
+    
     }
 };
 // @lc code=end
