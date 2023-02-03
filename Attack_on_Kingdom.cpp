@@ -1,3 +1,6 @@
+/*
+Author : linneszyx
+*/
 #include<bits/stdc++.h>
 using namespace std;
 void bubblesort(int arr[],int n)
