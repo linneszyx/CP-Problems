@@ -31,9 +31,9 @@ void wafifuuuuui(){
 }
 int main()
 {
-    int TC;
-    cin>>TC;
-    while (TC--)
+    int tc;
+    cin>>tc;
+    while (tc--)
     {
         wafifuuuuui();
     }

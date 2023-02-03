@@ -23,9 +23,9 @@ void pppsdspd()
 }
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int test_case;
+    cin >> test_case;
+    while (test_case--)
     {
         pppsdspd();
     }

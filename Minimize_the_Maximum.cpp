@@ -1,6 +1,4 @@
-/*
-Author : linneszyx
-*/
+
 #include<bits/stdc++.h>
 using namespace std;
 #define xx long long int

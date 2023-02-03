@@ -25,9 +25,9 @@ int solve()
 }
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int test_case;
+    cin >> test_case;
+    while (test_case--)
     {
         int x;
         x = solve();
