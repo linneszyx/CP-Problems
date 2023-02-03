@@ -1,11 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-/**
- * It rotates the array by k elements.
- * 
- * @param a the array to be rotated
- * @param k the number of rotations
- */
+
 void rotateK(vector<int> a,int k){
 int n = a.size();
 k = k%n;
