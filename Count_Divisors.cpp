@@ -5,12 +5,12 @@ int32_t main()
 {
     int l,r,k;
     cin>>l>>r>>k;
-    int x = 0;
+    int xzp = 0;
     for (int i = l; i < r+1; i++)
     {
-        if(i%k==0) x++;
+        if(i%k==0) xzp++;
     }
-    cout<<x<<endl;
+    cout<<xzp<<endl;
     
 return 0;
 }

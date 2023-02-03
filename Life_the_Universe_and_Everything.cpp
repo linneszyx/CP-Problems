@@ -2,16 +2,12 @@
 using namespace std;
 int main()
 {
-   int n;
-   cin>>n;
-   while (n!=42)
+   int xsi;
+   cin>>xsi;
+   while (xsi!=42)
    {
-    cout<<n<<endl;
-    cin>>n;
+    cout<<xsi<<endl;
+    cin>>xsi;
    }
-   
-    
-    
-
 return 0;
 }

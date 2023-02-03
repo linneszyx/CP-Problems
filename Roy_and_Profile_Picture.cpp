@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 {
-    int l,n;
-    cin>>l;
+    int li,n;
+    cin>>li;
     cin>>n;
     int w[n],h[n];
     for (int i = 0; i < n; i++)
@@ -12,7 +12,7 @@ int main()
     }
     for (int i = 0; i < n; i++)
     {
-        if(w[i]<l || h[i]<l) {
+        if(w[i]<li || h[i]<li) {
             cout<<"UPLOAD ANOTHER\n";
         }
         else {

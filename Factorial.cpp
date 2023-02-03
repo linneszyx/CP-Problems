@@ -4,12 +4,12 @@ int main()
 {
     int n;
     cin>>n;
-    int fact = 1;
+    int fi = 1;
     for (int i = 1; i <=n; i++)
     {
-        fact = fact*i;
+        fi = fi*i;
     }
-    cout<<fact;
+    cout<<fi;
     
 return 0;
 }

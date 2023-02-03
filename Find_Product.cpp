@@ -4,15 +4,15 @@ using namespace std;
 const int MOD = 1e9+7;
 int32_t main()
 {
-    int n;
-    cin>>n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int xi;
+    cin>>xi;
+    int arr[xi];
+    for (int i = 0; i < xi; i++)
     {
         cin>>arr[i];
     }
     int res = 1;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < xi; i++)
     {
         res = (res*(arr[i]%MOD))%MOD;
     }
