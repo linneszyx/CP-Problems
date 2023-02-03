@@ -76,10 +76,10 @@ void send_all_acceptable_packages(town* source, int source_office_index, town* t
 
 int number_of_packages(town t)
 {
-    int ans = 0;
+    int x = 0;
     for (int i = 0; i < t.offices_count; i++)
-        ans += t.offices[i].packages_count;
-    return ans;
+        x += t.offices[i].packages_count;
+    return x;
 }
 
 town town_with_most_packages(town* towns, int towns_count)

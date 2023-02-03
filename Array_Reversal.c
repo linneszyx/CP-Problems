@@ -11,7 +11,7 @@ int main()
     }
 
 
-    /* Write the logic to reverse the array. */
+  
     int temp;
     for (int i = 0; i < num/2; i++)
     {

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include<activation.h>
 #define MIN_ELEMENT 1
 #define MAX_ELEMENT 1000000
 int  sum (int count,...) {

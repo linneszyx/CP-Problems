@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <assert.h>
 #define MAX_CHARACTERS 1005
 #define MAX_PARAGRAPHS 5

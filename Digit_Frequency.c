@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-
+#include<adshlp.h>
 int main() {
 
     char s;

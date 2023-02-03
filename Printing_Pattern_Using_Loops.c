@@ -9,7 +9,7 @@ int main()
     int n;
     scanf("%d", &n);
     int l = n*2-1;
-  	// Complete the code to print the pattern.
+  	
     int i,j;
     for (i=0;i<l;i++)
     {

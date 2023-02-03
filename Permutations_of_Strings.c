@@ -13,7 +13,7 @@ void reverse(char **s,int se,int e){
     }
     
 }
-int next_permutation(int n, char **s)
+int next_perrmutation(int n, char **s)
 {
     for (int i = n-2; i>-1; i--)
     {
