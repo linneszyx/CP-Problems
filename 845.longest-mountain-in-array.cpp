@@ -68,6 +68,14 @@
 class Solution
 {
 public:
+    /**
+     * We iterate through the array, and whenever we find a peak, we expand in both directions to find
+     * the length of the mountain
+     * 
+     * @param arr an array of integers
+     * 
+     * @return The length of the longest mountain.
+     */
     int longestMountain(vector<int> &arr)
     {
         int n = arr.size();
