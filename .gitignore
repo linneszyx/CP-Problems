@@ -45,3 +45,4 @@
 *.vsix
 *.cph
 *.bin
+cache
