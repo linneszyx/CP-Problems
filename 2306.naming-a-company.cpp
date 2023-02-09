@@ -92,7 +92,7 @@ public:
                 set.insert(vic[i].begin(), vic[i].end());
                 set.insert(vic[j].begin(), vic[j].end());
                 distinctNamesOfCompanies += (vic[i].size() - set.size()) * (vic[j].size() - set.size());
-            }''
+            }
         }
 
         return distinctNamesOfCompanies * 2;
