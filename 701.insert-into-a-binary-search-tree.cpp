@@ -72,6 +72,24 @@
 class Solution
 {
 public:
+    /**
+     * If the root is null, return a new node with the value. Otherwise, if the value is less than the
+     * root, insert it into the left subtree. Otherwise, insert it into the right subtree
+     * 
+     * @param root the root of the BST
+     * @param val the value to insert into the BST
+     * 
+     * @return The root of the tree.
+     */
+    /**
+     * If the root is null, return a new node with the value. Otherwise, if the value is less than the
+     * root, insert it into the left subtree. Otherwise, insert it into the right subtree
+     * 
+     * @param root the root of the BST
+     * @param val the value to insert into the BST
+     * 
+     * @return The root of the tree.
+     */
     TreeNode *insertIntoBST(TreeNode *root, int val)
     {
         if (root == nullptr)
