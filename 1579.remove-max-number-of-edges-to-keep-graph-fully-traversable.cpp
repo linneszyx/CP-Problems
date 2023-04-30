@@ -7,79 +7,49 @@
 // @lc code=start
 class Solution {
 public:
-   
+    int find(int x, vector<int>& parent){
+        if(parent[x] == x) return x;
+        return parent[x] = find(parent[x],parent);
+    }
     int maxNumEdgesToRemove(int n, vector<vector<int>>& edges) {
-      int dp[n+1];
-        for(int i=0;i<=n;i++)
-            dp[i]=i;
-        int ans=0;
-        for(int i=0;i<edges.size();i++)
-        {
-            if(edges[i][0]==3)
-            {
-                int a=edges[i][1];
-                int b=edges[i][2];
-                int pa=dp[a];
-                int pb=dp[b];
-                while(pa!=dp[pa])
-                    pa=dp[pa];
-                while(pb!=dp[pb])
-                    pb=dp[pb];
-                if(pa==pb)
-                    ans++;
-                else
-                    dp[pa]=pb;
+        int size = edges.size();
+        vector<int> parent(n+1);
+        for(int i=0;i<=n;i++) parent[i] = i;
+        int ans = 0;
+        for(int i=0;i<size;i++){
+            if(edges[i][0] == 3){
+                int x = find(edges[i][1],parent);
+                int y = find(edges[i][2],parent);
+                if(x == y) ans++;
+                else parent[x] = y;
             }
         }
-        int dp1[n+1];
-        for(int i=0;i<=n;i++)
-            dp1[i]=dp[i];
-        for(int i=0;i<edges.size();i++)
-        {
-            if(edges[i][0]==1)
-            {
-                int a=edges[i][1];
-                int b=edges[i][2];
-                int pa=dp[a];
-                int pb=dp[b];
-                while(pa!=dp[pa])
-                    pa=dp[pa];
-                while(pb!=dp[pb])
-                    pb=dp[pb];
-                if(pa==pb)
-                    ans++;
-                else
-                    dp[pa]=pb;
+        vector<int> parent1 = parent;
+        for(int i=0;i<size;i++){
+            if(edges[i][0] == 1){
+                int x = find(edges[i][1],parent);
+                int y = find(edges[i][2],parent);
+                if(x == y) ans++;
+                else parent[x] = y;
             }
         }
-        for(int i=0;i<edges.size();i++)
-        {
-            if(edges[i][0]==2)
-            {
-                int a=edges[i][1];
-                int b=edges[i][2];
-                int pa=dp1[a];
-                int pb=dp1[b];
-                while(pa!=dp1[pa])
-                    pa=dp1[pa];
-                while(pb!=dp1[pb])
-                    pb=dp1[pb];
-                if(pa==pb)
-                    ans++;
-                else
-                    dp1[pa]=pb;
+        for(int i=0;i<size;i++){
+            if(edges[i][0] == 2){
+                int x = find(edges[i][1],parent1);
+                int y = find(edges[i][2],parent1);
+                if(x == y) ans++;
+                else parent1[x] = y;
             }
         }
-        int c1=0,c2=0;
-        for(int i=1;i<=n;i++)
-        {
-            if(dp[i]==i)
-                c1++;
-            if(dp1[i]==i)
-                c2++;
+        int count = 0;
+        for(int i=1;i<=n;i++){
+            if(parent[i] == i) count++;
         }
-        if(c1>1||c2>1)
-            return -1;
+        int count1 = 0;
+        for(int i=1;i<=n;i++){
+            if(parent1[i] == i) count1++;
+        }
+        if(count > 1 || count1 > 1) return -1;
         return ans;
     }
 };
