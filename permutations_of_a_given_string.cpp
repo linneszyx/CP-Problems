@@ -14,6 +14,7 @@ class Solution
             do {
                 res.push_back(S);
             } while (next_permutation(S.begin(), S.end()));
+            
             return res;
 		}
 };
