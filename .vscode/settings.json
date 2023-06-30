@@ -86,7 +86,9 @@
         "syncstream": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
