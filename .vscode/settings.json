@@ -97,7 +97,8 @@
         "xlocnum": "cpp",
         "xmemory": "cpp",
         "xstddef": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "stacktrace": "cpp"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
