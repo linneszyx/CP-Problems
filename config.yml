@@ -1,0 +1,2 @@
+- name: Create Leetcode Daily Practice Issue
+  uses: xingorg1/leetcode-daily-practice-action@1.4.0
