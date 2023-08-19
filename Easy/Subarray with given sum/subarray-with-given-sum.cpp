@@ -10,8 +10,7 @@ class Solution
     //Function to find a continuous sub-array which adds up to a given number.
     vector<int> subarraySum(vector<int>arr, int n, long long s)
     {
-        // Your code here
-      int l=0;
+        int l=0;
       int h=0;
       if(s==0) return {-1};
       long long s1=arr[l];
