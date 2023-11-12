@@ -4,16 +4,27 @@ using namespace std;
 
 
 // } Driver Code Ends
+
+// #define all(x) (p.begin())
 class Solution
 {
     public:
     //Function to check if a string can be obtained by rotating
     //another string by exactly 2 places.
-   bool isRotated(string a, string b)
+    bool isRotated(string str1, string str2)
     {
-        if(a.size()==1) return (a==b);
-        a+=a;
-        return (a.find(b)==2 || a.find(b)==b.size()-2);
+        // Your code here
+        string str = str1;
+        reverse(str.begin(),str.begin()+2);
+        reverse(str.begin()+2,str.end());
+        reverse(str.begin(),str.end());
+        int x = str.length()-2;
+        reverse(str1.begin(),str1.begin()+x);
+        reverse(str1.begin()+x,str1.end());
+        reverse(str1.begin(),str1.end());
+        if(str==str2 || str1==str2) return true;
+        else return false;
+
     }
 
 };
