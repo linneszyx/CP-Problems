@@ -99,6 +99,19 @@ struct Node {
     }
 };
 */
+/*
+Structure of the node of the tree is as
+struct Node {
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+*/
 class Solution{
     public:
     // return true/false denoting whether the tree is Symmetric or not
