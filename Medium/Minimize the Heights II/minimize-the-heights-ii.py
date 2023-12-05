@@ -1,5 +1,7 @@
 #User function Template for python3
 
+#User function Template for python3
+
 class Solution:
     def getMinDiff(self, arr, n, k):
         # code here
@@ -13,6 +15,7 @@ class Solution:
             diff = min(diff,maxi-mini)
         result = diff
         return result
+
 
 
 #{ 
