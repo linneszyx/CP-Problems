@@ -1,42 +1,38 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
 
-// } Driver Code Ends
+
+
 class Solution {
-  public:
-    bool canPair(vector<int> nums, int k) {
-     unordered_map<int,int>mp;
-        
-        for(auto i:nums){
-            mp[i%k]++;
-        }
-        if(mp[0]%2!=0) return false;
-        
-        for(int i=1; i<k ; i++){
-            if(mp[i]!=mp[k-i]) return false;
-        }
-        
-        return true;
-    }
+public:
+boolcanPair(vector<int>nums,intk){
+// Code here.
+intn=nums.size();
+if(n%2!=0)returnfalse;
+unordered_map<int,int>mp;//for storing remainder
+intpair=0;
+for(inti=0;i<nums.size();i++){
+intrem=nums[i]%k;
+if(rem==0){
+mp[0]++;
+if(mp[0]%2==0){
+pair++;
+mp[0]=mp[0]-2;
+}
+ 
+}
+elseif(mp.find(k-rem)!=mp.end()&&mp[k-rem]>0){
+pair++;
+mp[k-rem]--;
+// if(mp[k-rem]==0)mp.erase(mp[k-rem]);
+}
+ 
+elsemp[rem]++;
+ 
+}
+ 
+if(pair*2==n)returntrue;
+ 
+returnfalse;
+}
 };
 
-//{ Driver Code Starts.
-int main() {
-    int tc;
-    cin >> tc;
-    while (tc--) {
-        int n, k;
-        cin >> n >> k;
-        vector<int> nums(n);
-        for (int i = 0; i < nums.size(); i++) cin >> nums[i];
-        Solution ob;
-        bool ans = ob.canPair(nums, k);
-        if (ans)
-            cout << "True\n";
-        else
-            cout << "False\n";
-    }
-    return 0;
-}
-// } Driver Code Ends
+
