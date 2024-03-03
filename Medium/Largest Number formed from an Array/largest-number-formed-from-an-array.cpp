@@ -6,28 +6,19 @@ using namespace std;
 
 // } Driver Code Ends
 //User function template for C++
+bool comp(string a,string b){
+    return (a+b)>(b+a);
+}
+
 class Solution{
 public:
-	// The main function that returns the arrangement with the largest value as
-	// string.
-	// The function accepts a vector of strings
-bool static cmp(string a, string b){
-        return (a + b) > (b + a);
-    }
-    
-    string printLargest(vector<string> &arr) {
-        // code here
-        
-        sort(arr.begin(), arr.end(), cmp);
-        
-        string ans = "";
-        
-        for(string s : arr){
-            ans += s;
-        }
-        
-        return ans;
-    }
+	string printLargest(int n,vector<string> &a) {
+	    sort(a.begin(),a.end(),comp);
+	    string ans;
+	    for(auto s:a)
+	        ans+=s;
+	    return ans;
+	}
 };
 
 //{ Driver Code Starts.
@@ -43,7 +34,7 @@ int main() {
             cin >> arr[i];
         }
         Solution ob;
-        auto ans = ob.printLargest(arr);
+        auto ans = ob.printLargest(n, arr);
         cout << ans << "\n";
     }
     return 0;
