@@ -23,39 +23,31 @@ void printList(Node* node) {
 
 
 // } Driver Code Ends
-/*
 
-struct Node {
-    int data;
-    struct Node *next;
-    Node(int x) {
-        data = x;
-        next = NULL;
-    }
-};
-
-*/
-
+#define all(p)  p.begin(),p.end()
+#define vi vector<int>
+#define sz(x) ((int)x.size())
+#define pb push_back
 class Solution {
   public:
-    // Function to rotate a linked list.
     Node* rotate(Node* head, int k) {
-         Node* End=head; //keep track of first part
-        Node* t=head;
-        Node* ans=NULL; //keep tract of second part
-        while(k>1){
-            t=t->next;
-            k--;
-        }
-        ans = t->next;
-        t->next = NULL;
-        t=ans;
-        if(!t) return End;
-        while(t && t->next){
-            t=t->next;
-        }
-        t->next=End; // link first part with second part
-        return ans;
+     vi v;
+     int n=0;
+     Node * t = head;
+     while(t!=nullptr) {
+         v.pb(t->data);
+         t=t->next;
+         n++;
+     } 
+      t=head;
+      reverse(v.begin(),v.begin()+(k%n));
+      reverse(v.begin()+(k%n),v.end());
+      reverse(all(v));
+      for(int i=0;i<sz(v);i+=1) {
+          t->data=v[i];
+          t=t->next;
+      }
+      return head;
     }
 };
 
@@ -97,6 +89,7 @@ int main() {
         Solution ob;
         head = ob.rotate(head, k);
         printList(head);
+        cout << "~\n";
     }
     return 1;
 }
