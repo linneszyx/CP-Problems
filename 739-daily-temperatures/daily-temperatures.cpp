@@ -7,8 +7,8 @@ public:
         for (int i = n - 1; i >= 0; i -= 1) {
             while (!st.empty() and t[st.top()] <= t[i])
                 st.pop();
-            if (!st.empty())
-                v[i] = st.top()-i;
+            if (!st.empty() and t[st.top()]>t[i])
+                v[i] = st.top() - i;
             st.push(i);
         }
         return v;
